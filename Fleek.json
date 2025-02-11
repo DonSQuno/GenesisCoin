@@ -2,9 +2,12 @@
   "site": "GenesisCoin",
   "source": "./dist",
   "framework": "static",
-  "headers": {
-    "/styles.css": {
-      "Content-Type": "text/css"
+  "headers": [
+    {
+      "path": "/styles.css",
+      "headers": {
+        "Content-Type": "text/css"
+      }
     }
-  }
+  ]
 }
