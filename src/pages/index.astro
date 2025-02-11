@@ -1,11 +1,78 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenesisCoin - The New Era Begins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔥 GenesisCoin: The Future of Financial Freedom 🔥</h1>
+        <p>Less Supply. More Demand. Hold & Earn.</p>
+    </header>
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+    <main>
+        <section class="hero">
+            <h2>Join the Revolution</h2>
+            <p>GenesisCoin ($GEN) is the next evolution in decentralized finance, rewarding holders and burning tokens to drive scarcity.</p>
+            <button id="connectWallet">🚀 Connect Wallet & Access Presale 🚀</button>
+        </section>
 
-<Layout>
-	<Welcome />
-</Layout>
+        <section class="tokenomics">
+            <h2>📊 Tokenomics</h2>
+            <ul>
+                <li><strong>Total Supply:</strong> 1,000,000,000,000 GEN</li>
+                <li><strong>Presale:</strong> 30% (300B GEN)</li>
+                <li><strong>Liquidity Pool:</strong> 10% (100B GEN)</li>
+                <li><strong>Airdrops & Rewards:</strong> 15% (150B GEN)</li>
+                <li><strong>Marketing:</strong> 10% (100B GEN)</li>
+                <li><strong>Development Fund:</strong> 10% (100B GEN)</li>
+                <li><strong>Team Allocation:</strong> 5% (50B GEN)</li>
+                <li><strong>Pre-Sale Bonus:</strong> 3% (30B GEN)</li>
+                <li><strong>Liquidity Reserve:</strong> 5% (50B GEN)</li>
+                <li><strong>Giveaway:</strong> 1% (10B GEN)</li>
+            </ul>
+        </section>
+
+        <section class="why-join">
+            <h2>Why Join GenesisCoin?</h2>
+            <ul>
+                <li>💎 Holding = Winning, Selling = Losing</li>
+                <li>🔥 Less Supply, More Demand – Deflationary Token Model</li>
+                <li>🚀 100 Days Rewards Pool – 50 Billion GEN distributed among holders</li>
+                <li>💰 Stake Your Future – Hold GenesisCoin</li>
+                <li>🌍 First of Many Projects Under SQUNOHOLIX Brand Association</li>
+            </ul>
+        </section>
+
+        <section class="cta">
+            <h2>🚀 Ready to Join?</h2>
+            <button id="joinPresale">Join Presale</button>
+            <button id="whitepaper">Download Whitepaper</button>
+            <button id="connectDiscord">Connect to Discord</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GenesisCoin | SQUNOHOLIX BRAND ASSOCIATION</p>
+        <p>⚠️ This is not financial advice. Do Your Own Research (DYOR).</p>
+    </footer>
+
+    <script>
+        document.getElementById("connectWallet").addEventListener("click", async () => {
+            if (window.ethereum) {
+                try {
+                    await window.ethereum.request({ method: "eth_requestAccounts" });
+                    alert("Wallet connected. Access granted!");
+                } catch (error) {
+                    console.error("Wallet connection failed", error);
+                }
+            } else {
+                alert("No wallet found. Please install MetaMask.");
+            }
+        });
+    </script>
+</body>
+</html>
+
